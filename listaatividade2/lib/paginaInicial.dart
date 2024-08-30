@@ -17,13 +17,43 @@ class _PaginainicialState extends State<Paginainicial> {
         title: Center(child: Text('Saúde em dia', style: TextStyle(color: Colors.white , fontSize: 24),)),
         backgroundColor: Colors.lightBlue,
       ),
-      body: Center(
-        child: Text(
-          'Body',
-          style: TextStyle(fontSize: 24),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Informações Fictícias',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            Card(
+              child: ListTile(
+                title: Text('Quantidade de Passos'),
+                subtitle: Text('10.000 passos'),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text('Pressão Arterial'),
+                subtitle: Text('120/80 mmHg'),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text('Próximas Consultas Médicas'),
+                subtitle: Text('Consulta com Cardiologista em 30/08/2024'),
+              ),
+            ),
+          ],
         ),
       ),
-      bottomNavigationBar: BarraNavegacao()
+      bottomNavigationBar: BarraNavegacao(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add, color: Colors.white, size: 27,),
+        backgroundColor: Colors.lightBlue,
+        onPressed: () => {}
+      ),
     );
   }
 }
