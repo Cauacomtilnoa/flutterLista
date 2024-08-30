@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listaatividade2/paginaInicial.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Saúde em dia",
-      home: Paginainicial()
+      title: 'Saúde em dia',
+      home: const Paginainicial(),
     );
   }
 }
-
