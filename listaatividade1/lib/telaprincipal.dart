@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listaatividade1/cardtarefa.dart';
-import 'package:listaatividade1/espacamento.dart';
+import 'package:listaatividade1/Espacamento.dart';
 
 
 class TelaPrincipal extends StatefulWidget {

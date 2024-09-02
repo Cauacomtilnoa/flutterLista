@@ -39,7 +39,7 @@ class PaginaPerfilCard extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.edit, color: Colors.white),
             onPressed: () {
-              // Função para editar a informação (não implementada)
+              
             },
           ),
         ],

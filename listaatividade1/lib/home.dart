@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listaatividade1/modal.dart';
 import 'package:listaatividade1/telaprincipal.dart';
 
 class paginaInicial extends StatefulWidget {
@@ -22,56 +23,15 @@ class _paginaInicialState extends State<paginaInicial> {
         foregroundColor: Colors.white,
         child: Icon(Icons.add_circle),
         onPressed: () {
-          _showAddTaskDialog();
+          showDialog(context: context, 
+          builder: (BuildContext context) {
+            return const Modal(titulo: "Adicionar Tarefa", botao2texto: "Adicionar");
+          }
+          );
         },
       ),
     );
   }
 
-  void _showAddTaskDialog() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text("Adicionar Tarefa"),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Nome da Tarefa",
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Descrição da Tarefa",
-                ),
-              ),
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Status da Tarefa"
-                ),
-              ), 
-
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text("Cancelar"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                
-                Navigator.of(context).pop(); 
-              },
-              child: Text("Adicionar"),
-            ),
-          ],
-        );
-      },
-    );
-  }
+  
 }
