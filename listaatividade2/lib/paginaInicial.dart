@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listaatividade2/components/barraNavegacao.dart';
-
+import 'package:listaatividade2/components/paginaInicialCard.dart';
 
 class Paginainicial extends StatefulWidget {
   const Paginainicial({super.key});
@@ -14,35 +14,53 @@ class _PaginainicialState extends State<Paginainicial> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Saúde em dia', style: TextStyle(color: Colors.white , fontSize: 24),)),
-        backgroundColor: Colors.lightBlue,
+        title: Center(
+          child: Text(
+            'Saúde em dia',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        backgroundColor: Colors.lightBlueAccent,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Informações Fictícias',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Center(
+              child: Text(
+                'Informações',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 99, 197, 208),
+                ),
+              ),
             ),
             SizedBox(height: 20),
-            Card(
-              child: ListTile(
-                title: Text('Quantidade de Passos'),
-                subtitle: Text('10.000 passos'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text('Pressão Arterial'),
-                subtitle: Text('120/80 mmHg'),
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text('Próximas Consultas Médicas'),
-                subtitle: Text('Consulta com Cardiologista em 30/08/2024'),
+            Expanded(
+              child: ListView(
+                children: [
+                  PaginainicialCard(
+                    titulo: 'Quantidade de Passos',
+                    subtitulo: '10.000 passos',
+                    icon: Icons.directions_walk,
+                  ),
+                  PaginainicialCard(
+                    titulo: 'Pressão Arterial',
+                    subtitulo: '120/80 mmHg',
+                    icon: Icons.favorite,
+                  ),
+                  PaginainicialCard(
+                    titulo: 'Próximas Consultas Médicas',
+                    subtitulo: 'Consulta com Cardiologista em 30/08/2024',
+                    icon: Icons.calendar_today,
+                  ),
+                ],
               ),
             ),
           ],
@@ -50,10 +68,11 @@ class _PaginainicialState extends State<Paginainicial> {
       ),
       bottomNavigationBar: BarraNavegacao(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add, color: Colors.white, size: 27,),
-        backgroundColor: Colors.lightBlue,
-        onPressed: () => {}
+        child: Icon(Icons.add, color: Colors.white, size: 30),
+        backgroundColor: Colors.lightBlueAccent,
+        onPressed: () => {},
       ),
     );
   }
+
 }
