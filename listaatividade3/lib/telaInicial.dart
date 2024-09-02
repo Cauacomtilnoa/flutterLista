@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listaatividade3/components/barraNavegacao.dart';
+import 'package:listaatividade3/components/cardTelaInicial.dart';
 
 class Telainicial extends StatefulWidget {
   const Telainicial({super.key});
@@ -23,28 +24,10 @@ class _TelainicialState extends State<Telainicial> {
         color: Colors.black,
         child: ListView(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text(
-                      "Top Trendings",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 200,
-                  ),
-                ],
-              ),
-            )
+            CardTelaInicial(titulo: "Popular On Netflix", url1: "assets/images/octopusTeacher.jpeg", url2: "assets/images/betterCallSaul.jpeg", url3: "assets/images/1899.jpeg", url4: "assets/images/blackMirror.jpeg"),
+            CardTelaInicial(titulo: "Trending Now", url1: "assets/images/emilyInParis.jpeg", url2: "assets/images/theShining.jpeg", url3: "assets/images/wandinha.jpeg", url4: "assets/images/thePlatform.jpeg"),
+            CardTelaInicial(titulo: "New Releases", url1: "assets/images/joker.jpeg", url2: "assets/images/azizler.jpeg", url3: "assets/images/deathNote.jpeg", url4: "assets/images/lordOfTheRings.jpeg")
+          
           ],
         ),
       ),
