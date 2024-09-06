@@ -17,11 +17,25 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Espacamento(h: 12),
+          Espacamento(h: 20),
           CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
-          Espacamento(h: 12),
+          Espacamento(h: 20),
           CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.watch_later_outlined)),
-          Espacamento(h: 12),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
+          CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
+          Espacamento(h: 20),
           CardTarefa(titulo: "Estudar C#", descricao: "Estudar c#", cor: Colors.blue.shade300, icone: Icon(Icons.check)),
           
           

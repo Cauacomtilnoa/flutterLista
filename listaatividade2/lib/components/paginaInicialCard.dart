@@ -5,7 +5,7 @@ class PaginainicialCard extends StatelessWidget {
   final String subtitulo;
   final IconData icon;
 
-  PaginainicialCard({
+  const PaginainicialCard({super.key, 
     required this.titulo,
     required this.subtitulo,
     required this.icon,
@@ -18,7 +18,7 @@ class PaginainicialCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       elevation: 4,
-      margin: EdgeInsets.only(bottom: 16),
+      margin: const EdgeInsets.only(bottom: 16),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: Colors.lightBlueAccent,
@@ -26,7 +26,7 @@ class PaginainicialCard extends StatelessWidget {
         ),
         title: Text(
           titulo,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(subtitulo),
       ),

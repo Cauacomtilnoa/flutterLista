@@ -4,11 +4,13 @@ import 'package:listaatividade2/components/paginaPerfilCard.dart';
 
 
 class Perfil extends StatelessWidget {
+  const Perfil({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Perfil',
           style: TextStyle(
             color: Colors.white,
@@ -22,11 +24,11 @@ class Perfil extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Center(
               child: Stack(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 80,
                     backgroundImage: AssetImage('assets/fotoQualquer.png'),
                   ),
@@ -34,12 +36,12 @@ class Perfil extends StatelessWidget {
                     bottom: 0,
                     right: 0,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.blue,
                         shape: BoxShape.circle,
                       ),
                       child: IconButton(
-                        icon: Icon(Icons.camera_alt, color: Colors.white),
+                        icon: const Icon(Icons.camera_alt, color: Colors.white),
                         onPressed: () {
                           // Função para alterar a foto (não implementada)
                         },
@@ -49,12 +51,12 @@ class Perfil extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Informações Pessoais
-            PaginaPerfilCard(titulo: 'Nome', conteudo: 'João da Silva'),
-            PaginaPerfilCard(titulo: 'Idade', conteudo: '30 anos'),
-            PaginaPerfilCard(titulo: 'Peso', conteudo: '72 kg'),
-            PaginaPerfilCard(titulo: 'Altura', conteudo: '1,80 m'),
+            const PaginaPerfilCard(titulo: 'Nome', conteudo: 'João da Silva'),
+            const PaginaPerfilCard(titulo: 'Idade', conteudo: '30 anos'),
+            const PaginaPerfilCard(titulo: 'Peso', conteudo: '72 kg'),
+            const PaginaPerfilCard(titulo: 'Altura', conteudo: '1,80 m'),
           ],
         ),
       ),

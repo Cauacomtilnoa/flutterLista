@@ -9,12 +9,12 @@ class PaginaPerfilCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         color: Colors.lightBlueAccent,
         borderRadius: BorderRadius.circular(5),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             blurRadius: 1,
@@ -27,17 +27,17 @@ class PaginaPerfilCard extends StatelessWidget {
         children: <Widget>[
           Text(
             titulo,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           Expanded(
             child: Text(
               conteudo,
               textAlign: TextAlign.end,
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: const TextStyle(fontSize: 16, color: Colors.white),
             ),
           ),
           IconButton(
-            icon: Icon(Icons.edit, color: Colors.white),
+            icon: const Icon(Icons.edit, color: Colors.white),
             onPressed: () {
               
             },

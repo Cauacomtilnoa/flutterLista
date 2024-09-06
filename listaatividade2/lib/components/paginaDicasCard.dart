@@ -16,7 +16,7 @@ class PaginaDicasCard extends StatelessWidget {
         
       ),
       child: ListTile(
-        contentPadding: EdgeInsets.all(16),
+        contentPadding: const EdgeInsets.all(16),
         leading: Icon(
           icone,
           color: Colors.lightBlueAccent,
@@ -24,11 +24,11 @@ class PaginaDicasCard extends StatelessWidget {
         ),
         title: Text(
           titulo,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
           conteudo,
-          style: TextStyle(color: const Color.fromARGB(255, 81, 81, 81)),
+          style: const TextStyle(color: Color.fromARGB(255, 81, 81, 81)),
         ),
       ),
     );

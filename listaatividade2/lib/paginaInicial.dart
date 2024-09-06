@@ -14,7 +14,7 @@ class _PaginainicialState extends State<Paginainicial> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text(
             'Saúde em dia',
             style: TextStyle(
@@ -31,17 +31,17 @@ class _PaginainicialState extends State<Paginainicial> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: Text(
                 'Informações',
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 99, 197, 208),
+                  color: Color.fromARGB(255, 99, 197, 208),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView(
                 children: [
@@ -66,11 +66,11 @@ class _PaginainicialState extends State<Paginainicial> {
           ],
         ),
       ),
-      bottomNavigationBar: BarraNavegacao(),
+      bottomNavigationBar: const BarraNavegacao(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add, color: Colors.white, size: 30),
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () => {},
+        child: Icon(Icons.add, color: Colors.white, size: 30),
       ),
     );
   }
