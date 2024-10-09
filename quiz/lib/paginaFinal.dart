@@ -10,6 +10,9 @@ class PaginaFinal extends StatefulWidget {
 class _PaginaFinalState extends State<PaginaFinal> {
   @override
   Widget build(BuildContext context) {
+  final int acertos = ModalRoute.of(context)!.settings.arguments as int;
+String texto = acertos > 1 ? 'respostas' : "resposta";
+
     return Scaffold(
         appBar: AppBar(
           title: Center(
@@ -22,7 +25,7 @@ class _PaginaFinalState extends State<PaginaFinal> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text("Resultado"),
-              Text("Você acertou x de 10 questões"),
+              Text("Você acertou ${acertos} ${texto}  de  10 questões"),
               FilledButton(onPressed: () {Navigator.pushNamed(context, '/PaginaInicial');}, child: const Text('Jogar Novamente'), style: TextButton.styleFrom(backgroundColor: Colors.orange)),
             ],
           ),

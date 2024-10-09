@@ -32,7 +32,9 @@ class _PaginaInicialState extends State<PaginaInicial> {
               child: const Text('Iniciar Quiz')
               )
             ),
+            ElevatedButton(onPressed: (){}, child: Text('Some text'))
         ],
+        
       )
     );
   }
